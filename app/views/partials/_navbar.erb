@@ -1,0 +1,11 @@
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <% if @student %>
+      <li><a href="/students/logout">logout</a></li>
+      <li><a href="/students/index"><%= @student.first_name %></a></li>
+    <% else %>
+      <li><a href="/users/login">login</a></li>
+    <% end %>
+  </ul>
+</nav>

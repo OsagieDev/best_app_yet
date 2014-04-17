@@ -1,0 +1,31 @@
+<h1>Weclome <%= @student.first_name %></h1>
+<h2>List of All Organizations</h2>
+<% @orgs.each do |organization| %>
+<ul>
+  <li>
+    <a href="/organization/<%=organization.id%>"><%= organization.name %></a>
+  </li>
+</ul>
+<% end %>
+<br><br>
+<h2 class="sweetbutton"><a href="/organization/new">Create a New Organization</a></h2>
+
+<br><br>
+
+<h1>Create New Organisation</h1>
+<div>
+  <form action='/organization/new' method='post' class="form-group">
+    <label for="org_info[name]">Oranization Name</label><br>
+    <input type='text' name='org_info[name]' placeholder='Oganization Name'><span class='name'></span><br><br>
+    <label for="org_info[description]">Description</label><br>
+    <input type='text' name='org_info[description]' placeholder='Description'><span class='name'></span><br><br>
+    <label for="org_info[presidentf]">President First Name</label><br>
+    <input type='text' name='org_info[presidentf]' placeholder='President First Name'><span class='email'></span><br><br>
+    <label for="org_info[presidentl]">President Last Name</label><br>
+    <input type='text' name='org_info[presidentl]' placeholder='President LastName'><span class='email'></span><br><br>
+    <input class='signup sweetbutton' type='submit' value='Create Account'>
+  </form>
+</div>
+
+
+

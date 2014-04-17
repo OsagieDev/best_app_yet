@@ -1,0 +1,30 @@
+<h1>Index Page</h1>
+<div>
+  <h2>Login</h2>
+  <form action='/students/login' method='post' class="form-group">
+  <p class="error-message"></p>
+    <label for="login_info[email]">Email</label><br>
+    <input type='text' name='email' placeholder='email address'>
+    <br>
+    <label for="login_info[password]">Password</label><br>
+    <input type='password' name='password' placeholder='enter password'><br>
+    <input class="login sweetbutton" type='submit' value='login'>
+  </form>
+</div>
+<br><br>
+<div>
+  <h2>Create an account</h2>
+  <form action='/students/signup' method='post' class="form-group">
+    <label for="user_info[first_name]">First Name</label><br>
+    <input type='text' name='user_info[first_name]' placeholder='First name'><span class='name'></span><br><br>
+    <label for="user_info[last_name]">Last Name</label><br>
+    <input type='text' name='user_info[last_name]' placeholder='Last name'><span class='name'></span><br><br>
+    <label for="user_info[email]">Email</label><br>
+    <input type='text' name='user_info[email]' placeholder='email address'><span class='email'></span><br><br>
+    <label for="user_info[password]">Password</label><br>
+    <input type='password' name='user_info[password]' placeholder='enter password'><span class='password'></span><br><br>
+    <label for="confirm_password">Confirm Password</label><br>
+    <input type='password' name='confirm_password' placeholder='confirm password'><span class='confirm_password'></span><br><br>
+    <input class='signup sweetbutton' type='submit' value='Create Account'>
+  </form>
+</div>

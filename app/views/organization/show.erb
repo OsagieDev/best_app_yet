@@ -1,0 +1,38 @@
+<h1>This is the <%= @org.name %> Organization</h1>
+<h2><%= @org.description %></h2>
+<table>
+  <tr>
+    <td class="floatleft">
+      <img src="<%= @org.president.image_url %>">
+    </td>
+    <td class="floatright">
+      <h3>Our President: <%= @org.president.first_name %> <%= @org.president.last_name %></h3>
+      <br>
+      <p><%= @org.president.bio %></p>
+    </td>
+  </tr>
+</table>
+<table>
+  <h3>Our Members</h3>
+  <% counter = 1 %>
+  <% @org.members.each do |member|%>
+    <% if counter%3 != 0 %>
+      <td><img src="<%= member.image_url %>"></td>
+    <% else %>
+    <br>
+    <tr>
+      <td><img src="<%= member.image_url %>"></td>
+    </tr>
+
+     <br>
+     <% end %>
+  <% end %>
+</table>
+<table>
+  <form action="/organization/<%= @org.id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete!" class="redsweetbutton">
+  </form>
+</table>
+
+
